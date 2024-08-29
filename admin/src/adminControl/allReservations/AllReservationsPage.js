@@ -124,7 +124,7 @@ const ReservationsPage = () => {
                             <TableHead>
                                 <TableRow>
                                     <TableCell className="table-header">No.</TableCell>
-                                    <TableCell className="table-header">Name</TableCell>
+                                    <TableCell className="table-header">Restaurant Name</TableCell>
                                     <TableCell className="table-header">Email</TableCell>
                                     <TableCell className="table-header">Date</TableCell>
                                     <TableCell className="table-header">Time</TableCell>
@@ -145,7 +145,7 @@ const ReservationsPage = () => {
                                     reservations.map((reservation, index) => (
                                         <TableRow key={index}>
                                             <TableCell>{index + 1}</TableCell>
-                                            <TableCell>{reservation.name}</TableCell>
+                                            <TableCell>{reservation.restaurantName}</TableCell>
                                             <TableCell>{reservation.email}</TableCell>
                                             <TableCell>{reservation.date}</TableCell>
                                             <TableCell>{reservation.time}</TableCell>
