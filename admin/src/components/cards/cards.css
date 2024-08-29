@@ -1,0 +1,62 @@
+/* Card styles */
+.restaurant-card {
+    max-width: 305px;
+    height: 450px;
+    margin-bottom: 20px;
+    padding: 2.5vh;
+    border-radius: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Responsive Grid Container */
+.restaurant-grid {
+    margin-top: 20vh;
+    margin-left: 1vh;
+}
+
+/* Responsive styles for the Card component */
+@media (max-width: 1024px) {
+    .restaurant-grid {
+        margin-top: 15vh;
+    }
+
+    .restaurant-card {
+        max-width: 100%;
+        height: auto;
+        padding: 2vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .restaurant-card {
+        max-width: 100%;
+        height: auto;
+        padding: 1.5vh;
+    }
+
+    .restaurant-grid {
+        margin-top: 10vh;
+    }
+
+    .MuiPagination-root {
+        margin-top: -10vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .restaurant-card {
+        max-width: 100%;
+        height: auto;
+        padding: 1vh;
+    }
+
+    .restaurant-grid {
+        margin-top: 5vh;
+    }
+
+    .MuiPagination-root {
+        margin-top: -8vh;
+    }
+}

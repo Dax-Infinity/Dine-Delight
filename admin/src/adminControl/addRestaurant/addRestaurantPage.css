@@ -1,0 +1,27 @@
+.add-restaurant-page {
+    margin-top: 40px;
+}
+
+.page-title {
+    text-align: left;
+}
+
+.form-paper {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.upload-button {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.image-name {
+    margin-top: 10px;
+    color: #555;
+}
+
+.submit-button {
+    background-color: #28A745;
+    color: #fff;
+}
