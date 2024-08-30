@@ -3,7 +3,7 @@ const { postData, getData, deleteData, putData } = require('../Controller/Contro
 const { loginUser, registerUser } = require('../Controller/ControllerForLogin')
 const { getReservationData, getEmail } = require('../Controller/ControllerForUser')
 const { forgotPassword, resetPassword } = require('../Controller/authController')
-const { getallreservations, PutRestaurantData, deleteRestaurantData, getAllUsers } = require('../AdminController/ManageRestaurants')
+const { getallreservations, PutRestaurantData, deleteRestaurantData, getAllUsers, addRestaurantData, upload } = require('../AdminController/ManageRestaurants')
 const app = express()
 
 
@@ -27,5 +27,5 @@ app.get('/allreservations', getallreservations)
 app.get('/allusers', getAllUsers)
 app.put('/hotelData/:id', PutRestaurantData)
 app.delete('/hotelData/:id', deleteRestaurantData)
-
+app.post('/addnewdata', upload.single('image'), addRestaurantData);
 module.exports = app;

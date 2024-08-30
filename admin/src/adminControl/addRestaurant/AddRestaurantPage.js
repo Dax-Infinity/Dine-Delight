@@ -43,7 +43,7 @@ const AddRestaurantPage = () => {
         }
 
         try {
-            const response = await fetch(`${API_URL}/user/hotelData`, {
+            const response = await fetch(`${API_URL}/user/addnewdata`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -55,7 +55,7 @@ const AddRestaurantPage = () => {
                 throw new Error('Failed to add restaurant');
             }
 
-            navigate('/admin');
+            navigate('/admin/all-restaurants');
         } catch (error) {
             setError(error.message);
         }
