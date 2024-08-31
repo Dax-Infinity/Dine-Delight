@@ -3,6 +3,7 @@ const hotelData = require('../Moduls/HotelDataModule');
 const User = require('../Moduls/User');
 const multer = require('multer');
 const path = require('path');
+const ContactMessage = require('../Moduls/ContactMessage');
 
 
 
@@ -88,4 +89,63 @@ const getAllUsers = async (req, res) => {
         res.status(500).json({ message: 'Failed to fetch users' });
     }
 }
-module.exports = { PutRestaurantData, deleteRestaurantData, getallreservations, getAllUsers, addRestaurantData, upload }
+
+
+const contactReport = async (req, res) => {
+    try {
+        const { name, email, message } = req.body;
+
+        // Create a new contact message
+        const newMessage = new ContactMessage({
+            name,
+            email,
+            message
+        });
+
+        // Save the message to the database
+        await newMessage.save();
+
+        res.status(200).json({ success: true, message: 'Message received!' });
+    } catch (error) {
+        res.status(500).json({ success: false, message: 'An error occurred. Please try again later.' });
+    }
+}
+
+const getAllContacts = async (req, res) => {
+    try {
+        const messages = await ContactMessage.find().sort({ date: -1 });
+        res.status(200).json(messages);
+    } catch (error) {
+        res.status(500).json({ success: false, message: 'An error occurred while fetching messages.' });
+    }
+}
+
+const approveContact = async (req, res) => {
+    try {
+        await ContactMessage.findByIdAndUpdate(req.params.id, { status: 'approved' });
+        res.status(200).json({ success: true, message: 'Message approved.' });
+    } catch (error) {
+        res.status(500).json({ success: false, message: 'An error occurred.' });
+    }
+}
+
+const ignoreContact = async (req, res) => {
+    try {
+        await ContactMessage.findByIdAndUpdate(req.params.id, { status: 'ignored' });
+        res.status(200).json({ success: true, message: 'Message ignored.' });
+    } catch (error) {
+        res.status(500).json({ success: false, message: 'An error occurred.' });
+    }
+}
+
+const deleteContact = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const result = await ContactMessage.findByIdAndDelete(id);
+        res.status(201).json(result);
+    }
+    catch (error) {
+        throw error;
+    }
+}
+module.exports = { PutRestaurantData, deleteRestaurantData, getallreservations, getAllUsers, addRestaurantData, contactReport, upload, getAllContacts, approveContact, ignoreContact, deleteContact }

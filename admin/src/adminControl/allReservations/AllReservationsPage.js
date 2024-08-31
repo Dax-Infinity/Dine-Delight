@@ -115,7 +115,7 @@ const ReservationsPage = () => {
         <>
             <Navbar />
             <Container className="admin-page">
-                <Typography variant="h4" gutterBottom className="page-title" style={{ 'textAlign': "left" }}>
+                <Typography variant="h4" gutterBottom className="page-title" style={{ 'textAlign': "center" }}>
                     Manage Reservations
                 </Typography>
                 <Paper elevation={6} className="table-paper">

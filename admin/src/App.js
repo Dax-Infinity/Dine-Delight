@@ -13,6 +13,7 @@ import AdminPage from './adminControl/allRestaurants/AllRestaurantPage';
 import ReservationsPage from './adminControl/allReservations/AllReservationsPage';
 import AddRestaurantPage from './adminControl/addRestaurant/AddRestaurantPage';
 import AllUsersPage from './adminControl/allUsers/AllUsersPage';
+import ContactPage from './adminControl/contactPage/ContactPage';
 function App() {
   return (
     <>
@@ -29,6 +30,7 @@ function App() {
           <Route path="/contact" element={<PrivateRoute><Contact /></PrivateRoute>} />
           <Route path="/admin/all-restaurants" element={<PrivateRoute><AdminPage /></PrivateRoute>} />
           <Route path="/faq" element={<PrivateRoute><FAQ /></PrivateRoute>} />
+          <Route path="/admin/contact" element={<PrivateRoute><ContactPage /></PrivateRoute>} />
           <Route path="/admin/all-users" element={<PrivateRoute><AllUsersPage /></PrivateRoute>} />
           <Route path="/admin/add-restaurant" element={<PrivateRoute><AddRestaurantPage /></PrivateRoute>} />
           <Route path="/admin/all-reservations" element={<PrivateRoute><ReservationsPage /></PrivateRoute>}>

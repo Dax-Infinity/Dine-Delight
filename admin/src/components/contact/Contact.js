@@ -9,7 +9,7 @@ const ContactUs = () => {
                 Contact Us
             </Typography>
             <Typography variant="body1" paragraph style={{ color: '#555', marginBottom: '2rem' }}>
-                We’re here to help! Please use the form below to send us your inquiries, feedback, or any questions you may have. We aim to respond within 24 hours.
+                We're here to help! Please use the form below to send us your inquiries, feedback, or any questions you may have. We aim to respond within 24 hours.
             </Typography>
             <Box component="form" noValidate autoComplete="off">
                 <Grid container spacing={3}>
