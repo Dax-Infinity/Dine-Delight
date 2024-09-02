@@ -26,7 +26,7 @@ export default function Footer() {
                     <a href="/about" className="footer-link">About Us</a><br />
                     <a href="/restaurants" className="footer-link">Restaurants</a><br />
                     <a href="/contact" className="footer-link">Contact Us</a><br />
-                    <a href="/faqs" className="footer-link">FAQs</a><br />
+                    <a href="/faq" className="footer-link">FAQs</a><br />
                 </div>
 
                 <div className="footer-section">

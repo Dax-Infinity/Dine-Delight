@@ -101,7 +101,7 @@ const ContactUs = () => {
                     Phone: <a href="tel:+11234567890" style={{ color: '#007bff' }}>(123) 456-7890</a>
                 </Typography>
                 <Typography variant="body1" style={{ color: '#555' }}>
-                    Address: 123 Foodie Lane, Gourmet City, CA 90210
+                    Address: 108 Adam Street New York, NY 530220 United States
                 </Typography>
             </Box>
         </Container>

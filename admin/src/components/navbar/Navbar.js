@@ -19,9 +19,9 @@ const Navbar = () => {
                 <ul className="navbar-items">
                     <li className="navbar-item" onClick={() => path("/")}>Home</li>
                     <li className="navbar-item" onClick={() => path("/admin/add-restaurant")}>Add Restaurant</li>
-                    <li className="navbar-item" onClick={() => path("/admin/all-restaurants")}>Resetaurants</li>
+                    <li className="navbar-item" onClick={() => path("/admin/all-restaurants")}>Restaurants</li>
                     <li className="navbar-item" onClick={() => path("/admin/contact")}>Contact</li>
-                    <li className="navbar-item" onClick={() => path("/admin/all-reservations")}>Reservations</li>
+                    {/* <li className="navbar-item" onClick={() => path("/admin/all-reservations")}>Reservations</li> */}
                     <li className="navbar-item" onClick={() => path("/admin/all-users")}>Users</li>
                     {token ? <Button variant="contained" onClick={logOut} style={{ "backgroundColor": "#007BFF" }}>Logout</Button> :
                         <Button variant="contained" onClick={() => path("/login")} style={{ "backgroundColor": "#007BFF" }}>Login</Button>}
