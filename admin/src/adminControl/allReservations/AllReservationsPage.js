@@ -40,10 +40,10 @@ const ReservationsPage = () => {
         fetchReservations();
     }, []);
 
-    const handleEdit = (reservation) => {
-        setCurrentReservation(reservation);
-        setOpenEditDialog(true);
-    };
+    // const handleEdit = (reservation) => {
+    //     setCurrentReservation(reservation);
+    //     setOpenEditDialog(true);
+    // };
 
     const handleEditDialogClose = () => {
         setOpenEditDialog(false);
@@ -55,7 +55,7 @@ const ReservationsPage = () => {
 
         try {
             const response = await fetch(`${API_URL}/user/reservations/${currentReservation._id}`, {
-                method: 'PUT',
+                method: 'PUT',  
                 headers: {
                     'Authorization': `Bearer ${token}`,
                     'Content-Type': 'application/json',
@@ -150,15 +150,15 @@ const ReservationsPage = () => {
                                             <TableCell>{reservation.date}</TableCell>
                                             <TableCell>{reservation.time}</TableCell>
                                             <TableCell>{reservation.persons}</TableCell>
-                                            <TableCell style={{ "width": "200px" }}>
-                                                <Button
+                                            <TableCell style={{ "width": "100px" }}>
+                                                {/* <Button
                                                     variant="contained"
                                                     color="primary"
                                                     onClick={() => handleEdit(reservation)}
                                                     className="action-button"
                                                 >
                                                     Edit
-                                                </Button>
+                                                </Button> */}
                                                 <Button
                                                     variant="contained"
                                                     color="secondary"

@@ -10,7 +10,7 @@ import NotFound from './pages/NotFound';
 import ForgotPassword from './components/login/ForgotPassword';
 import ResetPassword from './components/login/ResetPassword';
 import AdminPage from './adminControl/allRestaurants/AllRestaurantPage';
-// import ReservationsPage from './adminControl/allReservations/AllReservationsPage';
+import ReservationsPage from './adminControl/allReservations/AllReservationsPage';
 import AddRestaurantPage from './adminControl/addRestaurant/AddRestaurantPage';
 import AllUsersPage from './adminControl/allUsers/AllUsersPage';
 import ContactPage from './adminControl/contactPage/ContactPage';
@@ -32,8 +32,8 @@ function App() {
           <Route path="/faq" element={<PrivateRoute><FAQ /></PrivateRoute>} />
           <Route path="/admin/contact" element={<PrivateRoute><ContactPage /></PrivateRoute>} />
           <Route path="/admin/all-users" element={<PrivateRoute><AllUsersPage /></PrivateRoute>} />
-          <Route path="/admin/add-restaurant" element={<PrivateRoute><AddRestaurantPage /></PrivateRoute>}>
-            {/* <Route path="/admin/all-reservations" element={<PrivateRoute><ReservationsPage /></PrivateRoute>}> */}
+          <Route path="/admin/add-restaurant" element={<PrivateRoute><AddRestaurantPage /></PrivateRoute>} />
+          <Route path="/admin/all-reservations" element={<PrivateRoute><ReservationsPage /></PrivateRoute>}>
 
           </Route>
         </Routes>
