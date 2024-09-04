@@ -73,6 +73,7 @@ const ContactPage = () => {
                         <Table>
                             <TableHead>
                                 <TableRow>
+                                    <TableCell>No.</TableCell>
                                     <TableCell>Name</TableCell>
                                     <TableCell>Email</TableCell>
                                     <TableCell>Message</TableCell>
@@ -81,8 +82,9 @@ const ContactPage = () => {
                                 </TableRow>
                             </TableHead>
                             <TableBody>
-                                {messages.map((msg) => (
+                                {messages.map((msg, index) => (
                                     <TableRow key={msg._id}>
+                                        <TableCell>{index + 1}</TableCell>
                                         <TableCell>{msg.name}</TableCell>
                                         <TableCell>{msg.email}</TableCell>
                                         <TableCell>

@@ -34,6 +34,7 @@ export default function Login() {
 
             const data = await response.json();
 
+
             if (response.ok && data.status == "ok") {
                 toast.success("Login successful");
                 window.localStorage.setItem("token", data.data);

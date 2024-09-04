@@ -15,7 +15,7 @@ const Navbar = () => {
     return (
         <>
             <nav className="navbar">
-                <div className="navbar-logo"><img src={logo} alt="logo" onClick={() => path("/")} /></div>
+                <div className="navbar-logo"><img src={logo} alt="logo" onClick={() => path("/")} /><span style={{ "marginLeft": "1vh", "fontSize": "22px" }}>| Admin</span></div>
                 <ul className="navbar-items">
                     <li className="navbar-item" onClick={() => path("/")}>Home</li>
                     <li className="navbar-item" onClick={() => path("/admin/add-restaurant")}>Add Restaurant</li>
