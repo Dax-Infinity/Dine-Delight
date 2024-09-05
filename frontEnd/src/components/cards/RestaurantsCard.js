@@ -256,6 +256,7 @@ export default function RestaurantCards({ restaurant }) {
                         />
                     </form>
                     <h6 style={{ "marginTop": "2vh", "paddingLeft": "0.6vh" }}>Address : {restaurant.address}</h6>
+                    <h6 style={{ "marginTop": "2vh", "paddingLeft": "0.6vh" }}>Tables left : {restaurant.totalTables}</h6>
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleClose} color="primary">
