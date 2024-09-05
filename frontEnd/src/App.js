@@ -5,12 +5,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './pages/Home';
 import About from './pages/Abouts';
 import Contact from './pages/Contact';
-import FAQ from './pages/Faq';
 import PrivateRoute from './components/privateRoute/PrivateRoute';
 import NotFound from './pages/NotFound';
 import ReservationsPage from './components/reservationPage/ReservationsPage';
 import ForgotPassword from './components/login/ForgotPassword';
 import ResetPassword from './components/login/ResetPassword';
+import ReportPage from './components/report/ReportPage';
+import Faq from './pages/Faq';
 function App() {
   return (
     <>
@@ -26,7 +27,8 @@ function App() {
           <Route index element={<PrivateRoute><Home /></PrivateRoute>} />
           <Route path="/contact" element={<PrivateRoute><Contact /></PrivateRoute>} />
           <Route path="/reservation" element={<PrivateRoute><ReservationsPage /></PrivateRoute>} />
-          <Route path="/faq" element={<PrivateRoute><FAQ /></PrivateRoute>} />
+          <Route path="/faq" element={<PrivateRoute><Faq /></PrivateRoute>} />
+          <Route path="/report" element={<PrivateRoute><ReportPage /></PrivateRoute>} />
           <Route path="/about" element={<PrivateRoute><About /></PrivateRoute>}>
 
           </Route>

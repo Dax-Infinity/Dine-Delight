@@ -130,6 +130,7 @@ const AdminPage = () => {
                                     <TableCell className="table-header">Address</TableCell>
                                     <TableCell className="table-header">City</TableCell>
                                     <TableCell className="table-header">Rating</TableCell>
+                                    <TableCell className="table-header">Table left</TableCell>
                                     <TableCell className="table-header">Actions</TableCell>
                                 </TableRow>
                             </TableHead>
@@ -151,6 +152,7 @@ const AdminPage = () => {
                                             <TableCell>{restaurant.address}</TableCell>
                                             <TableCell>{restaurant.city}</TableCell>
                                             <TableCell>{restaurant.rating}</TableCell>
+                                            <TableCell>{restaurant.totalTables}</TableCell>
                                             <TableCell style={{ "width": "200px" }}>
                                                 <Button
                                                     variant="contained"

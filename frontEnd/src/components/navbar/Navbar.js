@@ -21,6 +21,7 @@ const Navbar = () => {
                     <li className="navbar-item" onClick={() => path("/reservation")}>My Bookings</li>
                     <li className="navbar-item" onClick={() => path("/about")}>About</li>
                     <li className="navbar-item" onClick={() => path("/faq")}>Faq</li>
+                    <li className="navbar-item" onClick={() => path("/report")}>Insights</li>
                     <li className="navbar-item" onClick={() => path("/contact")}>Contact</li>
                     {token ? <Button variant="contained" onClick={logOut} style={{ "backgroundColor": "#007BFF" }}>Logout</Button> :
                         <Button variant="contained" onClick={() => path("/login")} style={{ "backgroundColor": "#007BFF" }}>Login</Button>}

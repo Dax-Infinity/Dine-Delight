@@ -25,6 +25,9 @@ const userSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    tatalTables: {
+        type: Number,
+    },
 });
 
 const User = mongoose.model('hotel-datas', userSchema);

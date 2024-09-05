@@ -27,4 +27,3 @@ const userSchema = mongoose.Schema({
 })
 const User = mongoose.model('Hotel_Seat_Reservations', userSchema);
 module.exports = User
-    

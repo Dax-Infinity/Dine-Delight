@@ -1,0 +1,34 @@
+.report-page {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1,
+h2 {
+    color: #333;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.offers,
+.trending,
+.content {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.offers ul,
+.trending ul,
+.content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.offers li,
+.trending li,
+.content li {
+    margin-bottom: 10px;
+}
